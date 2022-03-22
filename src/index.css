@@ -12,9 +12,7 @@
     text-transform: uppercase;
     text-decoration: underline;
   }
-  .container{
-    display: flex;
-  }
+  
   .container{
     display: flex;
     flex-wrap: wrap;
@@ -70,7 +68,6 @@
       color: #2c1203;
       font-size: 18px;
       padding: 5px 0;
-      margin: 5px 0;
       text-transform: uppercase;
       outline: none;
       cursor: pointer;

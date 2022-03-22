@@ -21,7 +21,7 @@ class App extends Component{
       }
     });
     setTimeout(async()=>{
-let resp = await fetch("/writers.json");
+let resp = await fetch ("/writers.json");
 let result = await resp.json();
 
 this.setState({
@@ -30,7 +30,8 @@ this.setState({
     list:result
   }
 });
-    }, 3500);
+    },
+     3500);
   }
 
   render() {
@@ -48,7 +49,7 @@ this.setState({
         </div>
         </div>
         </div>
-      )
+      );
     }
 
 return(
@@ -59,18 +60,19 @@ return(
     list.length == 0 ? (
       <div className='card action'>
       <p className="infoText">Oops...no writer profile found</p>
-      <button children="actionBtn" onClick={this.handleClick}>Get Writers</button>
+      <button className="actionBtn" onClick={this.handleClick}>Get Writers</button>
       </div>
+
     ):(
       list.map((writer)=>(
         <ProfileCard key={writer.id} writer={writer}/>
       ))
-    )}
+    )},
   </div>
   </div>
-)
+);
       }
     }
 
 
-export default App
+export default App;
